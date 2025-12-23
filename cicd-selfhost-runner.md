@@ -1147,8 +1147,11 @@ chmod +x monitor.sh
 watch -n 10 ./monitor.sh
 ```
 ### บันทึกผลการรัน monitor.sh
+
+<img width="1958" height="778" alt="image" src="https://github.com/user-attachments/assets/840ef6af-8dee-476e-9b21-6155cb052556" />
+
 ```txt
-บันทึกรูปผลการรันคำสั่ง
+
 ```
 
 ## สรุปจุดสำคัญ
@@ -1193,8 +1196,9 @@ watch -n 10 ./monitor.sh
 <details>
 <summary>คำตอบ</summary>
 
- เขียนคำตอบลงในช่องนี้
-
+ 
+Pull-based Model คือ Runner จะเป็นฝ่ายดึงงาน (job) จาก GitHub เองแทนที่จะรอให้ GitHub ส่งงานมาให้
+ข้อดี: Runner จะควบคุมการทำงานได้ง่าย ลดความเสี่ยงด้านความปลอดภัยเพราะไม่ต้องเปิดรอรับงานจากภายนอก
 
 </details>
 
@@ -1203,7 +1207,7 @@ watch -n 10 ./monitor.sh
 <details>
 <summary>คำตอบ</summary>
 
- เขียนคำตอบลงในช่องนี้
+ เพราะ Runner ดึงงานเอง ไม่ต้องเปิดพอร์ตรับคำสั่งจากภายนอก ทำให้ลดโอกาสที่ใครจะแอบส่งคำสั่งอันตรายเข้ามา
 
 
 </details>
@@ -1213,7 +1217,7 @@ watch -n 10 ./monitor.sh
 <details>
 <summary>คำตอบ</summary>
 
- เขียนคำตอบลงในช่องนี้
+ เพราะ npm ci จะติดตั้ง dependencies ตาม package-lock.json เป๊ะ ๆ ทำให้ทุกครั้ง deploy เหมือนเดิม ลดบั๊กจากเวอร์ชัน package ต่างกัน และเร็วกว่าด้วย
 
 
 </details>
@@ -1223,7 +1227,7 @@ watch -n 10 ./monitor.sh
 <details>
 <summary>คำตอบ</summary>
 
- เขียนคำตอบลงในช่องนี้
+ เพราะ Public Repo ใครก็ส่ง workflow มาให้รันบน Runner ได้ ถ้าใช้ Self-Hosted อาจมีคนส่งคำสั่งอันตรายทำให้ Server เสี่ยง
 
 
 </details>
@@ -1233,7 +1237,9 @@ watch -n 10 ./monitor.sh
 <details>
 <summary>คำตอบ</summary>
 
- เขียนคำตอบลงในช่องนี้
+ nginx คือ Web Server ตัวนึง ใช้รันเว็บไซต์และจัดการ Traffic
+Reverse Proxy คือ nginx เป็นตัวกลางรับ request แล้วส่งต่อไป Server จริง
+ประโยชน์: ช่วยกระจายโหลด, ปลอดภัยขึ้นเพราะซ่อน Server จริง, ทำ SSL หรือ cache ได้ง่าย
 
 
 </details>
