@@ -965,7 +965,7 @@ tail -f ~/actions-runner/_diag/Runner_*.log
 
   ```
 
-
+```
 ### ส่วนที่ 7: ทดสอบ CI/CD Pipeline
 
 #### 7.1 แก้ไข server.js และ Push
